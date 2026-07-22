@@ -1,0 +1,26 @@
+SCOUT MASSIVE ARTIST FIELD — PIPELINE TEST
+
+Validated locally with a synthetic MusicBrainz artist.tar.xz containing:
+- explicit female person artist
+- explicit male person artist
+- group artist
+
+PASS:
+- stream .tar.xz without extracting
+- canonical artist profile construction
+- durable pending shard rotation
+- /v1/embed batching
+- immutable vectors.f32 and norms.f32 shards
+- shard manifest verification
+- live SQLite metadata indexing
+- live memmap vector search
+- server-side source/type filters
+- server-side explicit female filter
+- unrestricted artist search
+- static SCOUT frontend serving
+- static visual asset serving
+- Python syntax compilation
+- frontend JavaScript syntax validation
+
+The real MusicBrainz dump is not bundled. The build command resolves LATEST,
+downloads artist.tar.xz, verifies SHA-256, ingests, embeds, and verifies it.
